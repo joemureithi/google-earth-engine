@@ -29,6 +29,6 @@ var trueColor432Vis = {
   min: 0.0,
   max: 30000.0,
 };
-// Map.addLayer(trueColor432, trueColor432Vis, 'Landsat 8 RGB');
+Map.addLayer(trueColor432, trueColor432Vis, 'Landsat 8 RGB');
                   
                   
