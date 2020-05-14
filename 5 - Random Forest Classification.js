@@ -6,6 +6,8 @@ var dataset = ee.ImageCollection('COPERNICUS/S2_SR')
                   .filterBounds(str)
                   .map(function(image){return image.clip(stuttgart)});
 print(dataset)
+
+// Select the darkest pixel for a cloudless image (NOT Perfect since it includes cloud shadows)
 var image = ee.Image(dataset.min());
 print(image)
 Map.addLayer(image, {bands:['B4', 'B3', 'B2'], min:0, max:3000}, 'S2 Level 2A');  
